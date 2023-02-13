@@ -1,0 +1,112 @@
+1. Concetamos con nuestro reposifotrio el GitHub y lo clonamos a nuestro PC donde crearemos nuestro fichero de trabajo.
+
+ >> git clone https://github.com/Juancavr6/umafactorial
+
+3. Añadimos nuestro nuevo fichero para que este listo para ser comiteado y git lo reconozca como tal.
+
+ >> git add factorial.java
+
+Realizamos la confirmación de los cambios y añadimos un mensaje descriptivo.
+
+ >> git commit –m “implementacion inicial”
+
+
+4.Hemos realizado combios de refactorizacion en el fichero por lo cual realizamos de nuevo una confirmación con commit , esta vez añadiendo los cambios del ultimo archivo añadido.
+
+ >> git commit -a -m "refactorizacion"
+
+5.Subimos los cambios hasta ahora a nuestro repositorio GitHub indicando el destino y la rama a subir.
+
+ >> git push origin main
+
+Creamos una nueva rama para trabajar los nuevos cambios
+
+ >> git checkout -b recursivo
+
+7.Confirmamos los ultimos cambios en el fichero y subimos los commits de la rama recursivo al repositorio GitHub
+
+ >> git commit -a -m "implementacion recursiva"
+ >> git pusg origin recursivo
+
+8. Volvemos a la rama main para trabajar con el código que dejamos en esta
+
+ >> git checkout main
+
+10.Confirmamos los útimos cambios realizados en la rama main y subimos el commit a nuestro repositorio GitHub
+
+ >> git commit -a -m "correccion numeros negativos"
+ >> git push origin main
+
+11.Volvemos a la rama recursivo para realizar cambios en el código que dejamos en esta
+
+ >> git checkout recursivo
+
+Realizamos la confirmacion de los cambios realizados en el código
+
+ >> git commit -a -m "optimizacion"
+
+12.Volvemos a la rama main para fusionarla con la rama secundario recursivo
+
+ >> git checkout main
+
+Realizamos la fusion de ambas ramas.No dará conlictos.
+
+ >> git merge recursivo
+
+13. Creamos una nueva rama refacIO para realizar cambios de refactorizacion en el metodo principal
+
+ >> git checkout -b refacIO
+
+14.Añadimos los cambios y los confirmamos en la nueva rama creada.
+
+ >> git commit -a -m "refactorizacion de metodo de entrada"
+
+15.Tenemos que cambiar de rama urgentemente por lo que los cambios deben ser guardados para confirmarlos mas adelante lo aremos con un stash.
+
+ >> git stash
+
+Volvemos a la rama main donde urgen los cambios
+
+ >> git checkout main
+
+16.Añadimos y confirmamos los cambios en la rama main 
+
+ >> git commit -a -m "cambio de long a BigInteger"
+
+Subimos los cambios confirmados a nuestro repositorio GitHub
+
+ >> git push origin main 
+
+Cambiamos a la rama refacIO dende los cambios aun no habian sido confirmados
+
+ >> git checkout refacIO
+
+Recuperamos los cambios no confirmados pero gurdados en el stash y ahora si confimamos los cambios con un commit
+
+ >> git stash pop
+ >> git commit -a -m "refactorizacion de metodo de salida"
+
+17.Vamos a fusionar la rama refacIO y la main por lo que volvemos primero a la main
+
+ >> git checkout main
+
+Ahora fusionamos las ramas con un merge
+
+ >> git merge refacIO
+
+19.Como han surgido conflictos , tras corregirlos , confirmamos la version final de la fusion
+
+ >> git commit -m "mezcla de rama refacIO"
+
+Subimos los ultimos cambios a nuestro repositorio GitHub
+
+ >> git push origin main
+
+
+
+
+
+
+
+
+
